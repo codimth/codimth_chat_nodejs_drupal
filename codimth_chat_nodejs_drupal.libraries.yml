@@ -1,0 +1,16 @@
+scripts:
+  version: 0.1
+  css:
+    theme:
+      'https://fonts.googleapis.com/css?family=Raleway:300,400,600': { type: external, minified: true }
+      css/app.css: {}
+      https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css: { type: external, minified: true }
+      css/style.css: {}
+  js:
+    https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js: { type: external, minified: true }
+    https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js: { type: external, minified: true }
+    js/script.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/drupalSettings

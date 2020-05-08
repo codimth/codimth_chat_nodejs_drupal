@@ -1,0 +1,18 @@
+{{ attach_library('codimth_chat_nodejs_drupal/scripts') }}
+
+
+<div id="boradcast"></div>
+<div id="chat"></div>
+
+<div class="form">
+    <div class="form-element">
+        <span id="username">{{ current_user.name.value }}</span>
+    </div>
+    <div class="form-element">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="message" class="form-textarea"></textarea>
+    </div>
+    <div class="form-actions">
+        <button id="send" class="button button--primary">Send</button>
+    </div>
+</div>

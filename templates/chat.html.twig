@@ -1,0 +1,43 @@
+<div id="app">
+    <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+               Chat Nodejs and Drupal
+            </a>
+        </div>
+    </nav>
+
+    <main class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">Chat Control</div>
+                        <div class="card-body">
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                    <span class="current_status" status="online">Online</span>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item status" status="online" href="#">Online</a>
+                                    <a class="dropdown-item status" status="offline" href="#">Offline</a>
+                                    <a class="dropdown-item status" status="bys" href="#">Busy</a>
+                                    <a class="dropdown-item status" status="dnd" href="#">don't disturb</a>
+                                </div>
+                            </div>
+                            <div id="chat-sidebar">
+                                {% for user in users %}
+                                <div id="sidebar-user-box" class="user" uid="{{ user.uid.value }}">
+                                    <img src="/modules/custom/codimth_chat_nodejs_drupal/image/user.png" />
+                                    <span id="slider-username">{{ user.name.value }}</span>
+                                    <span class="user_status user_{{ user.uid.value }}">&nbsp;</span>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

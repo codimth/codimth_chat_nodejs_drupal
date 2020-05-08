@@ -1,0 +1,7 @@
+name: CodimTh Chat Nodejs Drupal
+description: Create a Chat Nodejs Drupal
+package: CodimTh
+type: module
+core: 8.x
+dependencies:
+  - block
